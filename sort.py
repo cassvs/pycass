@@ -19,3 +19,16 @@ def bubble(list):
                 list[j] = swap
     return list
 # End of bubble function
+
+# Selection sort
+def selection(list):
+    for i in range (len(list) - 1):
+        smallest = i
+        for j in range (i + 1, len(list)):
+            if list[smallest] > list[j]:
+                smallest = j
+        swap = list[smallest]
+        list[smallest] = list[i]
+        list[i] = swap
+    return list
+# End of selection function
