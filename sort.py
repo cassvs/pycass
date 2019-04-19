@@ -1,7 +1,7 @@
 # sort.py
 # Sorting algorithms
 
-# Checkes if a list is sorted
+# Checks if a list is sorted
 def isSorted(list):
     for i in range(1, len(list)):
         if(list[i - 1] > list[i]):
