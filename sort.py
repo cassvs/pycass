@@ -10,25 +10,27 @@ def isSorted(list):
 # End of isSorted function
 
 # Bubble sort
-def bubble(list):
-    while not isSorted(list):
-        for j in range(len(list) - 1):
-            if list[j] > list[j + 1]:
-                swap = list[j + 1]
-                list[j + 1] = list[j]
-                list[j] = swap
-    return list
+def bubble(inputList):
+    sortList = list(inputList)
+    while not isSorted(sortList):
+        for j in range(len(sortList) - 1):
+            if sortList[j] > sortList[j + 1]:
+                swap = sortList[j + 1]
+                sortList[j + 1] = sortList[j]
+                sortList[j] = swap
+    return sortList
 # End of bubble function
 
 # Selection sort
-def selection(list):
-    for i in range (len(list) - 1):
+def selection(inputList):
+    sortList = list(inputList)
+    for i in range (len(sortList) - 1):
         smallest = i
-        for j in range (i + 1, len(list)):
-            if list[smallest] > list[j]:
+        for j in range (i + 1, len(sortList)):
+            if sortList[smallest] > sortList[j]:
                 smallest = j
-        swap = list[smallest]
-        list[smallest] = list[i]
-        list[i] = swap
-    return list
+        swap = sortList[smallest]
+        sortList[smallest] = sortList[i]
+        sortList[i] = swap
+    return sortList
 # End of selection function
