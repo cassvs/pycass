@@ -48,3 +48,18 @@ def bogo(inputList):
         sortList[rand2] = swap
     return sortList
 # End of bogo function
+
+# CassSort algorithm :P
+# Randomly shuffles the list a specified number of times, then gives up
+def cass(inputList, inputTries):
+    sortList = list(inputList)
+    tries = int(inputTries)
+    while (not isSorted(sortList)) and (tries > 0):
+        rand1 = randint(0, len(sortList) - 1)
+        rand2 = randint(0, len(sortList) - 1)
+        swap = sortList[rand1]
+        sortList[rand1] = sortList[rand2]
+        sortList[rand2] = swap
+        tries -= 1
+    return sortList
+# End of cass function
