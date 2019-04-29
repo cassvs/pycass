@@ -37,8 +37,8 @@ def selection(inputList):
     return sortList
 # End of selection function
 
-# Bogosort
-def bogo(inputList):
+# Bozosort
+def bozo(inputList):
     sortList = list(inputList)
     while not isSorted(sortList):
         rand1 = randint(0, len(sortList) - 1)
@@ -47,7 +47,7 @@ def bogo(inputList):
         sortList[rand1] = sortList[rand2]
         sortList[rand2] = swap
     return sortList
-# End of bogo function
+# End of bozo function
 
 # CassSort algorithm :P
 # Randomly shuffles the list a specified number of times, then gives up
