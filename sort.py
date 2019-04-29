@@ -1,7 +1,7 @@
 # sort.py
 # Sorting algorithms
 
-from random import randint
+from random import randint, shuffle
 
 # Checks if a list is sorted
 def isSorted(list):
@@ -36,6 +36,14 @@ def selection(inputList):
         sortList[i] = swap
     return sortList
 # End of selection function
+
+# Bogosort
+def bogo(inputList):
+    sortList = list(inputList)
+    while not isSorted(sortList):
+        shuffle(sortList)
+    return sortList
+# End of bogo function
 
 # Bozosort
 def bozo(inputList):
