@@ -71,3 +71,18 @@ def cass(inputList, inputTries):
         tries -= 1
     return sortList
 # End of cass function
+
+# CassNBradenSort algorithm :P
+# Randomly shuffles the list a specified number of times, then gives up half way through
+def cassNBraden(inputList, inputTries):
+    sortList = list(inputList)
+    tries = int(inputTries) / 2
+    while (not isSorted(sortList)) and (tries > 0):
+        rand1 = randint(0, len(sortList) - 1)
+        rand2 = randint(0, len(sortList) - 1)
+        swap = sortList[rand1]
+        sortList[rand1] = sortList[rand2]
+        sortList[rand2] = swap
+        tries -= 1
+    return sortList
+# End of cass function
